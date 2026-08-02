@@ -1,0 +1,9 @@
+{
+  "name": "dns_lookup",
+  "category": "network-analysis",
+  "description": "Collects DNS records for an authorized domain through dig or nslookup.",
+  "commands": ["dig", "nslookup"],
+  "requiresConsent": true,
+  "requiresInternetToggle": true,
+  "safety": "Passive DNS lookup only; no scanning or exploitation."
+}

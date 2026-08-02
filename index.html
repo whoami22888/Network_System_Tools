@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="description" content="Android-accessible browser app for network and system diagnostics." />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/icon.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Network System Tools</title>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <img src="/assets/icon.svg" alt="" class="brand-icon" />
+        <div>
+          <p class="eyebrow">Browser + Android ready</p>
+          <h1>Network System Tools</h1>
+        </div>
+      </div>
+      <button id="installButton" class="install-button" hidden>Install app</button>
+    </header>
+
+    <main>
+      <section class="hero card">
+        <p class="eyebrow">Cloud-first rebuild</p>
+        <h2>Use diagnostics from Chrome, Android, or a standalone home-screen app.</h2>
+        <p>
+          This progressive web app shell moves the project away from a desktop-only workflow and
+          toward a browser-accessible interface that can later connect to your own cloud runners.
+        </p>
+      </section>
+
+      <section class="grid" aria-label="Tool launcher">
+        <article class="card tool-card">
+          <h3>Connectivity check</h3>
+          <p>Open a safe browser request to confirm internet reachability from the device.</p>
+          <button data-tool="connectivity">Run check</button>
+          <output id="connectivityOutput">Waiting to run.</output>
+        </article>
+
+        <article class="card tool-card">
+          <h3>Cloud agent status</h3>
+          <p>Prepared for a hosted API endpoint that can run approved server-side diagnostics.</p>
+          <label>
+            API base URL
+            <input id="apiBase" type="url" placeholder="https://tools.example.com" inputmode="url" />
+          </label>
+          <button data-tool="agent">Save endpoint</button>
+          <output id="agentOutput">No endpoint configured.</output>
+        </article>
+
+        <article class="card tool-card">
+          <h3>Device context</h3>
+          <p>Shows browser-visible device information useful for mobile troubleshooting.</p>
+          <button data-tool="device">Show device info</button>
+          <output id="deviceOutput">Waiting to run.</output>
+        </article>
+      </section>
+
+      <section class="grid" aria-label="AI assistant and controls">
+        <article class="card tool-card assistant-card">
+          <h3>WhiteRabbitNeo assistant</h3>
+          <p>Chat with a local Ollama model. The assistant is instructed to explain actions and require consent before terminal or internet activity.</p>
+          <label>Agent bridge URL <input id="agentBridge" type="url" value="http://127.0.0.1:8787" /></label>
+          <textarea id="chatPrompt" rows="4" placeholder="Ask for an authorized defensive security check..."></textarea>
+          <button data-tool="chat">Send to AI</button>
+          <output id="chatOutput">Start the local bridge and Ollama, then send a message.</output>
+        </article>
+
+        <article class="card tool-card">
+          <h3>Human consent terminal</h3>
+          <p>Run only allow-listed commands through the local bridge. Every command is shown here before it runs.</p>
+          <label class="toggle"><input id="internetToggle" type="checkbox" /> Allow internet activity</label>
+          <label class="toggle"><input id="consentToggle" type="checkbox" /> I consent to this command</label>
+          <input id="terminalCommand" type="text" placeholder="uname -a" />
+          <button data-tool="terminal">Run visible command</button>
+          <output id="terminalOutput">No terminal actions yet.</output>
+        </article>
+
+        <article class="card tool-card">
+          <h3>Tools, skills, and findings</h3>
+          <p>Upload JSON tool/skill definitions, download session findings, and keep an audit trail of assistant actions.</p>
+          <input id="skillFile" type="file" accept="application/json,.json" />
+          <button data-tool="listTools">List built-in tools</button>
+          <button data-tool="uploadSkill">Upload skill</button>
+          <button data-tool="downloadLog">Download screen log</button>
+          <output id="skillsOutput">No tools uploaded.</output>
+        </article>
+      </section>
+
+    </main>
+
+    <nav class="bottom-nav" aria-label="Primary">
+      <a href="#" aria-current="page">Home</a>
+      <a href="#connectivityOutput">Checks</a>
+      <a href="#apiBase">Cloud</a>
+    </nav>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "connectivity_check",
+  "category": "network-analysis",
+  "description": "Checks browser or agent reachability to an authorized target using safe HTTP/DNS style checks.",
+  "commands": ["curl", "dig", "nslookup", "traceroute"],
+  "requiresConsent": true,
+  "requiresInternetToggle": true,
+  "safety": "Use only for targets you own or are authorized to test."
+}

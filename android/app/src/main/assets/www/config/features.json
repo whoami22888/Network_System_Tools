@@ -1,0 +1,26 @@
+{
+  "tiering": "disabled",
+  "paidFeatures": false,
+  "ollama": {
+    "provider": "local",
+    "defaultModel": "whiterabbitneo",
+    "paidServicesRequired": false
+  },
+  "features": {
+    "connectivityCheck": true,
+    "deviceContext": true,
+    "cloudAgentEndpoint": true,
+    "offlineAppShell": true,
+    "androidWrapper": true,
+    "aiChat": true,
+    "visibleActionConsole": true,
+    "humanConsentGate": true,
+    "internetKillSwitch": true,
+    "findingLogs": true,
+    "toolUploadDownload": true,
+    "builtInToolCatalog": true,
+    "diagnosticJobs": true,
+    "dnsDiagnostics": true,
+    "reachabilityDiagnostics": true
+  }
+}

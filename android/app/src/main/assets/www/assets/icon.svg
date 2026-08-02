@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title>Network System Tools</title>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#38bdf8" />
+      <stop offset="1" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+  <circle cx="256" cy="256" r="76" fill="#020617" />
+  <g fill="none" stroke="#e0f2fe" stroke-width="28" stroke-linecap="round">
+    <path d="M256 180V92" />
+    <path d="M256 420v-88" />
+    <path d="M180 256H92" />
+    <path d="M420 256h-88" />
+    <path d="M202 202l-62-62" />
+    <path d="M372 372l-62-62" />
+    <path d="M310 202l62-62" />
+    <path d="M140 372l62-62" />
+  </g>
+</svg>

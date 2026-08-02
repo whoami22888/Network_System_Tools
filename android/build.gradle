@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Use the direct Android Gradle Plugin artifact so builds do not depend on
+        // resolving the com.android.application plugin-marker module.
+        classpath 'com.android.tools.build:gradle:8.5.2'
+    }
+}
+
+allprojects {
+    tasks.withType(JavaCompile).configureEach {
+        options.incremental = true
+        options.encoding = 'UTF-8'
+    }
+}
