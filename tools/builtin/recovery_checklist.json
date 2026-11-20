@@ -1,0 +1,9 @@
+{
+  "name": "recovery_checklist",
+  "category": "system-recovery",
+  "description": "Guides the user through safe recovery notes, evidence preservation, backup checks, and rollback planning.",
+  "commands": ["date", "pwd"],
+  "requiresConsent": true,
+  "requiresInternetToggle": false,
+  "safety": "Checklist guidance only; destructive recovery actions must be performed manually by the user."
+}

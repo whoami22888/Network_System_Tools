@@ -1,0 +1,9 @@
+{
+  "name": "http_headers",
+  "category": "network-analysis",
+  "description": "Reviews response headers from an authorized web service to support security hardening.",
+  "commands": ["curl"],
+  "requiresConsent": true,
+  "requiresInternetToggle": true,
+  "safety": "Header inspection only; do not send intrusive payloads."
+}

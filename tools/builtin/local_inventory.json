@@ -1,0 +1,9 @@
+{
+  "name": "local_inventory",
+  "category": "system-analysis",
+  "description": "Collects basic local system context such as user, kernel, IP address, and listening sockets.",
+  "commands": ["whoami", "uname", "ip", "ifconfig", "ss", "netstat"],
+  "requiresConsent": true,
+  "requiresInternetToggle": false,
+  "safety": "Local read-only inventory commands only."
+}

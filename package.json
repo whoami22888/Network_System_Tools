@@ -1,0 +1,13 @@
+{
+  "name": "network-system-tools-pwa",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Android-accessible browser app shell for Network and System Tools.",
+  "scripts": {
+    "start": "python3 -m http.server 4173",
+    "agent": "python3 backend/agent_server.py",
+    "sync:android": "python3 scripts/sync_android_assets.py",
+    "check:android": "python3 scripts/check_android_build_env.py",
+    "check": "python3 -m json.tool manifest.webmanifest >/dev/null && python3 -m py_compile scripts/validate_static.py scripts/sync_android_assets.py scripts/check_android_build_env.py backend/agent_server.py && python3 scripts/validate_static.py"
+  }
+}
